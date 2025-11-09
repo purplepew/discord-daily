@@ -110,7 +110,6 @@ const runDiscordTask = async () => {
         browser = await puppeteer.launch({
             executablePath: '/opt/render/.cache/puppeteer/chrome/linux-1084059/chrome-linux/chrome', // Example path, might need adjustment
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
-            headless: false
         });
         const page = await browser.newPage();
         page.setDefaultNavigationTimeout(90000); // 90 seconds
