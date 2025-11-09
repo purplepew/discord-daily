@@ -108,8 +108,6 @@ const runDiscordTask = async () => {
     console.log('🚀 Starting Discord task...');
     try {
         browser = await puppeteer.launch({
-            executablePath: process.env.ENV === 'production' ? process.env.PUPPETEER_EXECUTABLE_PATH
-                : puppeteer.executablePath(),
             args: ['--no-sandbox', '--disable-setuid-sandbox', "--single-process", "--no-zygote"],
         });
         const page = await browser.newPage();
