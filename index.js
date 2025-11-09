@@ -45,7 +45,7 @@ const ensurePageLoaded = async (page) => {
 const waitForSelectorWithRetries = async (page, selector) => {
     for (let attempt = 1; attempt <= CONFIG.MAX_RETRIES; attempt++) {
         try {
-            await page.waitForSelector(selector, { timeout: 10000 });
+            await page.waitForSelector(selector, { timeout: 20000 });
             return true;
         } catch (error) {
             console.log(`⚠️ Selector "${selector}" not found, retrying... (${attempt}/${CONFIG.MAX_RETRIES})`);
