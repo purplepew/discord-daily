@@ -1,0 +1,50 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+.env.*.secret
+secrets.*
+credentials.json
+*.key
+*.pem
+
+# Build / output
+dist/
+build/
+out/
+coverage/
+.nyc_output/
+.cache/
+.tmp/
+*.tgz
+
+# Logs
+logs/
+*.log
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.history/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.DS_Store
+
+# Misc
+.env.production
+.serverless/
+.cache/
