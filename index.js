@@ -107,7 +107,11 @@ const runDiscordTask = async () => {
     let browser = null;
     console.log('🚀 Starting Discord task...');
     try {
-        browser = await puppeteer.launch({ headless: false });
+        browser = await puppeteer.launch({
+            executablePath: '/opt/render/.cache/puppeteer/chrome/linux-1084059/chrome-linux/chrome', // Example path, might need adjustment
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            headless: false
+        });
         const page = await browser.newPage();
         page.setDefaultNavigationTimeout(90000); // 90 seconds
 
